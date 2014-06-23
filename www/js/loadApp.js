@@ -3,7 +3,9 @@ define([
     'main',
        
     //layouts
-    'layouts/page',
+    'views/home',
+    'views/map',
+    'views/sendtoy',
     //.....
     
     'router',

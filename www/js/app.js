@@ -40,9 +40,9 @@ define(['jquery', 'underscore', 'backbone', 'handlebars', 'layoutmanager', 'boot
     
     console.log("%cDeveloped by Kitchen", "color: #3d3b46; font-size: 28px;font-weight:bold");
     console.log("%c☕︎", "color: #a27d22; font-size: 50px");
-    console.log("%cFront-end developed by Filip Arnerić & Clément Grellier", "color: #3d3b46; font-size: 18px");
+    console.log("%cFront-end developed by Filip Arnerić", "color: #3d3b46; font-size: 18px");
     console.log("%c✍", "color: #a27d22; font-size: 50px");
-    console.log("%cCMS developed by Velimir Matić and Nikola Plavšić", "color: #3d3b46; font-size: 18px");    
+    console.log("%cBack-End developed by Velimir Matić", "color: #3d3b46; font-size: 18px");    
 
     return App;
 });

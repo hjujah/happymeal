@@ -42,8 +42,8 @@ define(['app',
 
 			self.$el.removeAttr("class").addClass(App.options.lang);
 			//App.Views.navigation.setActiveNav();
-			//App.Views.navigation.closeNav();
 	        //$navbar.hasClass("in") && $navbar.collapse('hide');
+	        
 			self.view && self.destroy_view();
 			self.define_fetch();
 			   
@@ -53,24 +53,23 @@ define(['app',
 			var self = this;
 			
 			//destroy the previous view
-			App.layout && self.destroy_view();
+			App.view && self.destroy_view();
 			
 			//define view and collection then render
-			App.layout = /* App.Views[App.options.view] */ new App.Layouts.Page;
+			App.view = /* App.Views[App.options.view] */ new App.Views.Home;
 
 			 //fetch the data if needed if not render page
-		    if(App.layout.getFetchURL){
-		    	
-		    	
-			  	App.Collections[App.viewName] = Backbone.Collection.extend({
-			        url: /* App.options.fetchUrl */ App.layout.getFetchURL()
+		    if(App.view.getFetchURL){
+		    		    	
+			  	App.Collections[App.options.view] = Backbone.Collection.extend({
+			        url: /* App.options.fetchUrl */ App.view.getFetchURL()
 			    });	    
 			      
-			    App.layout.collection = new App.Collections[App.viewName];	
-				App.layout.collection.fetch({
+			    App.view.collection = new App.Collections[App.options.view];	
+				App.view.collection.fetch({
 	                reset: true,
 	                success: function() {
-	                	App.layout.dataCollection = App.layout.collection.toJSON();
+	                	App.view.dataCollection = App.view.collection.toJSON();
 	                    self.renderPage();
 	                }
 	            });
@@ -84,20 +83,11 @@ define(['app',
 		renderPage: function(){
 	    	var self = this;
 	    
-	    	//change page title
-	    	/*
-if(self.view.dataCollection && self.view.dataCollection[0].meta){
-		  		document.title = "Project Name - " + self.view.dataCollection[0].meta.meta_title;
-		  	}
-*/
-		  	
-		  	//preload and render view
+	    	//preload and render view
 		  	App.loader = new PxLoader();
 		  	
-		  	App.layout.preload(function(){
-		  		
-		  		App.layout.render(function(){
-			  		self.layout.afterRender && self.layout.afterRender();
+		  	App.view.preload(function(){
+		  		App.view.render(function(){
 			  		self.afterRender();
 		  		});
 		  			
@@ -107,12 +97,10 @@ if(self.view.dataCollection && self.view.dataCollection[0].meta){
 		
 		afterRender: function(){
 			var self = this;
-			
-			alert("after main");
 			App.firstInit = false;	
 			
 			//Delegate events
-			App.layout.delegateEvents();
+			App.view.delegateEvents();
 			App.Common.delegateEvents();	
 			FastClick.attach(document.body);
 	  		
@@ -132,7 +120,8 @@ if(self.view.dataCollection && self.view.dataCollection[0].meta){
 	    	var lang = $(e.currentTarget).data("lang"),
 	    		cur = (window.location.pathname),
 	    		newPage = cur.replace(App.options.lang, lang),
-	    		href = (_.filter(App.Routes, function(data){ return data.url == href.substr(1) })[0]) ? href : lang + "/" + App.pageName;
+	    		href = (_.filter(App.Routes, function(data){ return data.url == href.substr(1) })[0]) ? href 
+	    			: lang + "/" + App.pageName;
 
 	    	App.Router.navigate(href, true);	  
 	    	App.Views.navigation.render(); 	    	
@@ -155,7 +144,6 @@ if(self.view.dataCollection && self.view.dataCollection[0].meta){
 		        	alert("hjuston master");
 		        }
 		    });
-
 	  
 	    }
 	

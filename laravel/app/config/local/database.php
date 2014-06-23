@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'crestyl',
+			'database'  => 'happymeal',
 			'username'  => 'root',
 			'password'  => 'selasije',
 			'charset'   => 'utf8',
