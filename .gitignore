@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# logs
+*.log
+
+/www/.sass-cache
+/www/js/app.min.js
+laravel/app/config/local/database.php
