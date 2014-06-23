@@ -1,0 +1,40 @@
+
+.sub-header {
+
+	.clearfix();
+	height: @subHeaderHeight;
+	background-color: @subHeaderBackground;
+
+	.sub-header-left {
+		float: left;
+		position: relative;
+		width: @appSidebarWidth;
+	}
+
+	.sub-header-main {
+		position: relative;
+		margin-left: @appSidebarWidth;
+		.clearfix();
+		padding: 0 15px;
+		line-height: 50px;
+
+
+		.view-nav {
+			float: left;
+			margin-left: 20px;
+		}
+
+		.nav-line {
+
+			> li {
+				> a {
+					line-height: 30px;
+					height: 50px;
+				}
+			}
+		}
+	}
+
+
+
+}

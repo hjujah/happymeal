@@ -1,0 +1,21 @@
+<div id="titlediv" class="title-wrap">
+	<div class="form-group">
+		<input type="text" class="form-control" id="title" placeholder="[% placeholder || 'Title' %]" ng-model="title" />
+		<div class="edit-url-box form-inline">
+			<strong>Permalink: </strong>
+			<span class="url">
+				<span ng-show="customNameMode == 'default'">
+					<span class="base-url">[%urlString%]</span>
+					<span class="btn btn-default btn-xs" ng-click="editCustomName()">Change</span>
+				</span>
+				<span class="" ng-show="customNameMode == 'edit'">
+					<span class="base-url">[%baseUrl%]/[%parentUrl%]</span>
+					<input type="text" class="form-control input-sm" ng-model="name">
+					<span class="btn btn-default btn-xs" ng-click="saveCustomName()">Ok</span>
+					<span class="btn btn-default btn-xs" ng-click="cancelCustomName()">Cancel</span>
+				</span>
+				<span class="">[%urlStatus%]</span>
+			</span>
+		</div>
+	</div>
+</div>

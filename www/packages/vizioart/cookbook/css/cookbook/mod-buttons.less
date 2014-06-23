@@ -1,0 +1,47 @@
+
+
+.btn-lang-options {
+	
+	position: relative;
+	width: 100%;
+
+	.btn-action {
+		text-align: left;
+		width: 80%;
+	}
+
+	.btn-options {
+		width: 20%;
+	}
+
+	.dropdown-menu {
+		right: 1px;
+	}
+
+	&.open {
+
+		.btn-action {
+			border-bottom-left-radius: 0;
+		}
+		.btn-options {
+			border-bottom-right-radius: 0;
+		}
+
+		.dropdown-menu {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			margin-top: 0;
+
+			p {
+				margin: 0;
+				padding:3px 20px;
+				&.tip {
+					font-size: 12px;
+					color:@gray-light;
+				}
+			}
+		}
+
+	}
+
+}

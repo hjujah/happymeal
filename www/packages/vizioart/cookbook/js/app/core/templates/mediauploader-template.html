@@ -1,0 +1,39 @@
+<div class="media-uploader" ng-show="show">
+	<div class="backdrop"></div>
+	<div id="plupload-dd-area" class="media-uploader-panel plupload-dd-area panel panel-default">
+		<div class="panel-heading">Panel heading without title</div>
+		<div class="panel-body">
+			<div class="plupload-wrap"  ng-show="status=='default'">
+				<div class="plupload-dir" droparea-plupload instance="uploader" dropareaid="plupload-dd-area" params="uploaderParams">Plupload btn</div>
+			</div>
+
+			<div class="plupload-files-list-wrap" ng-show="status=='list'">
+				<div class="row">
+					<div class="col-md-2" ng-repeat="file in files">
+						[%file.status%]
+						<div class="upload-progress-wrap" ng-show="file.status == 'uploading'">
+							<p class="upload-name">Filename.jpg</p>
+							<div class="upload-progress">
+								<div class="progress-bar" style="width: [%file.progress%]%;"></div>
+							</div>
+							<div class="upload-actions">
+								<a href="#" ng-click="cancelDownload($event, item)">Cancel</a>
+							</div>
+						</div>
+
+						<div class="item-wrap" ng-show="file.status == 'uploaded'">
+							<img ng-src="[%file.url%]" width="100%"/>
+							<div class="item-actions">
+								<span class="btn btn-default btn-sm pull-right" ng-click="deleteFile(file)">delete</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<span class="btn btn-primary" ng-click="done()">Done</span>
+			<span class="btn btn-default" ng-click="cancel()">Cancel</span>
+		</div>
+	</div>
+</div>

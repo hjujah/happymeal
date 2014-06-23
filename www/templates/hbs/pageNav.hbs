@@ -1,0 +1,15 @@
+<div class='text-container beige fullHeight'>
+	<a class="icon close-icon showPages" href="#">
+		<span></span>
+	</a>
+	
+	<div class='fullHeight scroller' id='scroller'>
+		<div class='vCenter'>
+			<div id='contentContainer' class='vCenterKid fittext' data-fit='{{#if_eq lang compare='ru'}} 5.2 {{else}} 4 {{/if_eq}}' data-min='8' data-max='100'>
+				{{#each data.siblings}}
+					<a href="{{permalink}}" class="links {{#if this.active}} active {{/if}} subLink uppercase bold block goldT inheritSize">{{this.title}}</a>
+				{{/each}}					
+			</div>
+		</div>
+	</div>
+</div>

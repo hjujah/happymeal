@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><span>Gallery</span> <span class="btn btn-primary btn-xs pull-right" ng-click="openMediaUploader()">Upload Images</span></div>
+	<div class="panel-body">
+
+		<!-- 
+		<div id="titlediv">
+			<div class="form-group">
+				<input type="text" class="form-control" id="title" placeholder="Gallery title" ng-model="Gallery.form.name">
+			</div>
+		</div>
+		-->
+
+		<div class="gallery-items-list-wrap">
+			<div class="row" ng-if="!!Gallery.form.items && Gallery.form.items.length > 0">
+				<div class="col-md-3" ng-repeat="item in Gallery.form.items">
+
+					<div class="item-wrap">
+						<img ng-src="[%item.url%]" width="100%"/>
+						<div class="item-actions">
+							<span class="btn btn-default btn-xs pull-right" ng-click="Gallery.deleteItem(item.id)">delete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p ng-if="!Gallery.form.items || Gallery.form.items.length < 1">There are no images yet</p>
+		</div>
+
+		<div mediauploader show='mediaUploaderShown' done-callback="uploaderDone" ></div>
+
+	</div>
+</div>

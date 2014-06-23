@@ -1,0 +1,23 @@
+body {
+  margin-top: 0!important;
+}
+
+#listPrint {
+  font-size: 10px;
+  width: 100%!important;
+}
+
+#list {
+  padding: 0!important;
+}
+
+#list th,
+#list td {
+  display: inline-block!important;
+  width: 11.1111%!important;
+}
+
+#list.phase1Print th,
+#list.phase1Print td {
+  width: 16.6666%!important;
+}

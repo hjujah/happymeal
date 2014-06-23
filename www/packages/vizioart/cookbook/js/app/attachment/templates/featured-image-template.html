@@ -1,0 +1,61 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><span>Featured Image</span></div>
+	<div class="panel-body">
+
+		<div class="featured-image-holder" ng-click="openMediaUploader()" ng-show="!Attachment.inited">
+			<div class="vCenter">
+				<div class="vCenterKid">
+					<span class="upload-icon glyphicon glyphicon-upload"></span>
+					<p>Set featured image</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="featured-image-wrap" ng-show="Attachment.inited">
+			<img ng-src="[%Attachment.url%]"/>
+		</div>
+
+	</div>
+
+	<div class="panel-footer clearfix" ng-show="Attachment.inited" >
+		<a ng-click="deleteImage()" href="#" class="pull-right text-danger">Remove</a>
+	</div>
+
+	<div mediauploader show='mediaUploaderShown' done-callback="uploaderDone" single="true"></div>
+
+
+	<style>
+		.featured-image-holder {
+			height: 150px;
+			background: #eee;
+			border: 1px solid #ccc;
+			text-align: center;
+			opacity: 0.6;
+		}
+
+		.featured-image-holder .upload-icon {
+			color: #ccc;
+			font-size: 24px;
+		}
+
+		.featured-image-holder:hover {
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		.featured-image-holder:hover .upload-icon {
+			color: #428bca;
+		}
+
+		.featured-image-wrap {
+
+		}
+
+		.featured-image-wrap img {
+			width: 100%;
+		}
+	</style>
+
+
+</div>
+

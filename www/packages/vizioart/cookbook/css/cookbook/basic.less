@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+	padding-top: 51px;
+	background-color:#e5e5e5;
+}
+
+#main {
+	min-height: 100%;
+	margin-bottom: -30px; 
+
+	&:after {
+		content: "";
+		display: block;
+		height: 30px;
+	}
+}
+
+.app-main {
+	margin-left: @appSidebarWidth;
+	padding: 15px 0 0;
+
+}
+

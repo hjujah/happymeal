@@ -1,0 +1,36 @@
+
+.nav-line {
+
+  > li {
+    float: left;
+    // Actual tabs (as links)
+    > a {
+      margin: 0 10px;
+      line-height: 1;
+      color: #737373;
+      border-bottom: 2px solid transparent;
+      padding: 10px 0;
+
+      .transition(all 0.5s ease);
+      
+      &:hover {
+        background: none;
+        border-bottom: 2px solid #427fed;
+        color:#262626;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #262626;
+        font-weight: bold;
+        border-bottom: 2px solid #427fed;
+        cursor: default;
+        background: none;
+      }
+    }
+  }
+}

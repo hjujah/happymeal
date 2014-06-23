@@ -1,0 +1,277 @@
+/** 
+ *  Master Slider
+ *	version 1.0
+ * 	Core css file
+ */
+/* line 7, ../../sass/master/masterslider.scss */
+.master-slider {
+  position: relative;
+  visibility: hidden;
+  -moz-transform: translate3d(0, 0, 0);
+  height: 100% !important;
+}
+
+/* line 18, ../../sass/master/masterslider.scss */
+.master-slider img {
+  max-width: none;
+}
+
+/* line 20, ../../sass/master/masterslider.scss */
+.ms-ie img {
+  border: none;
+}
+
+/* line 21, ../../sass/master/masterslider.scss */
+.ms-ie8 * {
+  opacity: inherit;
+  filter: inherit;
+}
+
+/* line 22, ../../sass/master/masterslider.scss */
+.ms-ie7 {
+  zoom: 1;
+}
+
+/* line 24, ../../sass/master/masterslider.scss */
+.ms-loading-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+/* line 31, ../../sass/master/masterslider.scss */
+.ms-loading-container .ms-loading,
+.ms-slide .ms-slide-loading {
+  width: 36px;
+  height: 36px;
+  background: url(master/loading-2.gif) no-repeat center white;
+  border-radius: 60px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -18px;
+  opacity: 0.9;
+  display: none;
+}
+
+/* grab cursor */
+/* line 47, ../../sass/master/masterslider.scss */
+.ms-def-cursor {
+  cursor: auto !important;
+}
+
+/* line 48, ../../sass/master/masterslider.scss */
+.ms-grab-cursor {
+  cursor: url("master/grab.png"), move;
+}
+
+/* line 49, ../../sass/master/masterslider.scss */
+.ms-grabbing-cursor {
+  cursor: url("master/grabbing.png"), move;
+}
+
+/* line 50, ../../sass/master/masterslider.scss */
+.ms-ie .ms-grab-cursor {
+  cursor: url("master/style/grab.cur"), move;
+}
+
+/* line 51, ../../sass/master/masterslider.scss */
+.ms-ie .ms-grabbing-cursor {
+  cursor: url("master/style/grabbing.cur"), move;
+}
+
+/* line 53, ../../sass/master/masterslider.scss */
+.ms-view {
+  margin: 0px auto;
+  overflow: hidden;
+  background: black;
+  position: relative;
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
+  height: 100% !important;
+}
+
+/* line 67, ../../sass/master/masterslider.scss */
+.ms-view .ms-slide-container {
+  position: relative;
+  height: 100%;
+}
+
+/* line 69, ../../sass/master/masterslider.scss */
+.ms-slide {
+  position: absolute;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+/* line 87, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-bgcont {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 92, ../../sass/master/masterslider.scss */
+.ms-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 93, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-bgcont img, .ms-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 100, ../../sass/master/masterslider.scss */
+.ms-slide .ms-layer {
+  /* 	position:absolute; */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 106, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-layers {
+  position: absolute;
+  /* 	overflow:hidden; */
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0px;
+  left: 40px !important;
+  display: inline-table !important;
+}
+
+/* line 117, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-video {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  background: black;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* line 127, ../../sass/master/masterslider.scss */
+.ms-layer.video-box {
+  background: black;
+}
+
+/* line 128, ../../sass/master/masterslider.scss */
+.ms-layer.video-box iframe {
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 135, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-vpbtn, .ms-slide .ms-video-btn {
+  position: absolute;
+  cursor: pointer;
+  z-index: 12;
+}
+
+/* line 141, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-vcbtn {
+  position: absolute;
+  cursor: pointer;
+  z-index: 13;
+}
+
+/* line 151, ../../sass/master/masterslider.scss */
+.ms-slide .ms-slide-vcbtn,
+.ms-slide .ms-slide-vpbtn,
+.ms-slide .ms-slide-video,
+.ms-slide .ms-slide-layers,
+.ms-slide .ms-layer {
+  -webkit-transform: translateZ(0.1px);
+  -moz-transform: translateZ(0.1px);
+  -ms-transform: translateZ(0.1px);
+  -o-transform: translateZ(0.1px);
+  transform: translateZ(0.1px);
+  color: white;
+}
+
+/* line 161, ../../sass/master/masterslider.scss */
+.ms-video-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 167, ../../sass/master/masterslider.scss */
+.ms-mask-frame {
+  overflow: hidden;
+  position: absolute;
+  float: left;
+}
+
+/* controls */
+/* line 175, ../../sass/master/masterslider.scss */
+.ms-thumb-list {
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 179, ../../sass/master/masterslider.scss */
+.ms-thumbs-cont {
+  position: relative;
+}
+
+/* line 180, ../../sass/master/masterslider.scss */
+.ms-thumb-frame img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 181, ../../sass/master/masterslider.scss */
+.ms-thumb-frame {
+  cursor: pointer;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 187, ../../sass/master/masterslider.scss */
+.ms-bullet {
+  cursor: pointer;
+  float: left;
+}
+
+/* line 189, ../../sass/master/masterslider.scss */
+.ms-sbar .ms-bar {
+  position: relative;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -ms-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+/* line 198, ../../sass/master/masterslider.scss */
+.ms-time-bar {
+  -webkit-transition: width 120ms linear;
+  -moz-transition: width 120ms linear;
+  -ms-transition: width 120ms linear;
+  -o-transition: width 120ms linear;
+  transition: width 120ms linear;
+}
+
+/* line 207, ../../sass/master/masterslider.scss */
+.ms-ie7 .ms-tooltip-arrow {
+  height: 0px;
+}

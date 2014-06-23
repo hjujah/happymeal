@@ -1,0 +1,37 @@
+({
+    baseUrl: '/Users/filip/Sites/dock/www/js',
+    paths: {
+    	'jquery': 'vendor/jquery.min',
+        'underscore': 'vendor/underscore',
+        'backbone': 'vendor/backbone',
+        'handlebars': 'vendor/handlebars-1.3',
+        'text': 'vendor/text',
+        'async': 'vendor/async', 
+        'noext': 'vendor/noext',
+        "imagesLoaded": "libs/jquery.imagesloaded",
+        'bootstrap': 'vendor/sass-bootstrap.min',
+        'smartresize': 'libs/smartresize',
+        'datatables': 'libs/jquery.dataTables',
+        'tweenmax': "libs/TweenMax.min",
+        'imgLiquid' : 'libs/imgLiquid-min',
+        'modernizr' : 'vendor/modernizr',
+        'backstretch' : 'libs/jquery.backstretch.min',
+        'nicescroll' : 'libs/jquery.nicescroll.min',
+        'royal' : 'libs/jquery.royalslider.min',
+/*         'cssPlugin' : 'libs/CSSPlugin', */
+        'easing' : 'libs/masterslider/jquery.easing.min',
+        'fittext' : 'libs/jquery.fittext',
+        'raphael' : 'libs/raphael',
+        'three' : 'libs/Three',
+        'tween' : 'libs/Tween',
+        'infobox': 'libs/infobox.min',
+        'fastclick': 'libs/fastclick',
+        'pxloader': 'libs/pxloader/pxloader',
+        'pxloadertags': 'libs/pxloader/pxloadertags',
+        'pxloaderimage': 'libs/pxloader/pxloaderimage',
+        'pxloadervideo': 'libs/pxloader/pxloadervideo'
+    },
+    name: "load",
+    preserveLicenseComments: false,
+    out: "app.min.js"
+})

@@ -1,0 +1,75 @@
+
+
+.card {
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	.box-sizing(border-box);
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+	border-bottom-width: 2px;
+
+	.card-more {
+		background: url(../images/sprites/arrow-down.png) no-repeat 0 0;
+		background-color: #fff;
+		cursor: pointer;
+		float: right;
+		width: 16px;
+		height: 16px;
+		margin-right: -3px;
+		margin-top: 0;
+		visibility: hidden;
+		.opacity(0.5);
+
+		&:hover {
+			.opacity(0.9);
+		}
+	}
+
+	&:hover {
+		.card-more {
+			visibility: visible;
+		}
+	}
+}
+
+.article-item {
+	position: relative;
+	margin: 10px 0 20px 0;
+	height: 100px;
+
+	.item-image {
+		position: absolute;
+		height: 100%;
+		width: 100px;
+		background: #eee;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+
+		a img {
+			width: 100%;
+		}
+	}
+
+	.item-content {
+		padding: 20px 20px 20px 120px;
+
+
+		.title {
+			margin: 0;
+			font-size: 14px;
+
+			a {
+				color:inherit;
+			}
+		}
+
+		.meta {
+			color: #999;
+			display: inline-block;
+			font-size: 12px;
+		}
+
+
+	}
+}

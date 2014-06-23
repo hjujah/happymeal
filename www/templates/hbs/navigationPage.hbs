@@ -1,0 +1,46 @@
+<div class='container-fluid fullHeight {{page}}'>
+
+	<div class='row fullHeight'>
+		
+		<div id='slider-wrapper' class="fullHeight vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			{{#each data.children}}
+				<div class="cube-wrap h70 col-xs-12 col-sm-12 col-md-{{../colSize}} col-lg-{{../colSize}} setSize {{this.name}}">
+					<div class="cube depth setSize">
+					
+						<div class="front-pane hiddenBackface side hoverEffect setSize fittext" data-fit='{{../dataFit}}' data-min='12' data-max='100'>
+						
+								<a href='{{this.permalink}}' class='links fullHeight block setSize'>
+	
+								<div class='liquid absolute grey-blue setSize'>
+									<img src='{{#baseUrl}}{{/baseUrl}}/uploads/md_{{featured_image.url}}'/>
+								</div>
+								
+								<div class='headlineHolder row'>
+									<div class="icon">
+										<div class="content"><div class="more"></div></div>
+									</div>
+									<div class="text">
+										<div class="vCenter">
+											<h3 class="vCenterKid fittext iBlock inheritSize">
+												<span>{{this.title}}</span>
+											</h3>
+										</div>
+									</div>
+									<div class="stripe transition"></div>
+								</div>
+		
+							</a>
+						</div>
+						
+						{{#makeSides}}{{/makeSides}}
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	
+	</div>
+		
+</div>
+
+<div class="fixBorder fixBorderL hidden-xs"></div>
+<div class="fixBorder fixBorderR hidden-xs"></div>

@@ -1,0 +1,22 @@
+{
+    "name": "vizioart/handlebars-l4",
+    "description": "A Handlebars.php wrapper for Laravel 4",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Velja Matic",
+            "email": "veljamatic@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "voodoophp/handlebars": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Vizioart\\HandlebarsL4\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

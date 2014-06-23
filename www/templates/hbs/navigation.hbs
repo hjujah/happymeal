@@ -1,0 +1,34 @@
+<!-- mobile nav-->
+<nav class="navbar navbar-default navbar-fixed-top fittext" role="navigation" data-fit='30' data-min='11' data-max='100'>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class='navbar-brand links' href='/'>
+<!-- 		<img src="{{#baseUrl}}{{/baseUrl}}/img/dock.svg" alt="Dock" /> -->
+	</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+    	{{#each data.desktop.items}}
+     	<li class='{{this.css_class}}'><a class='links' href='{{#baseUrl}}{{/baseUrl}}/{{#lang}}{{/lang}}/{{this.url}}'>{{this.label}}</a></li>			
+		{{/each}}
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<div id='loadingHolder' class='fullHeight perspective'>
+	<div id='loading'>
+		<div class='vCenter'>
+			<div class='vCenterKid'>
+<!-- 				<img id='loadingLogo' src='{{#baseUrl}}{{/baseUrl}}/img/crestyl.svg' /> -->
+			</div>
+		</div>
+	</div>
+</div>
