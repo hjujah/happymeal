@@ -56,7 +56,7 @@ define(['app',
 			App.view && self.destroy_view();
 			
 			//define view and collection then render
-			App.view = /* App.Views[App.options.view] */ new App.Views.Home;
+			App.view = /* App.Views[App.options.view]  */new App.Views.Map;
 
 			 //fetch the data if needed if not render page
 		    if(App.view.getFetchURL){
@@ -87,25 +87,13 @@ define(['app',
 		  	App.loader = new PxLoader();
 		  	
 		  	App.view.preload(function(){
-		  		App.view.render(function(){
-			  		self.afterRender();
-		  		});
+		  		App.view.render();
 		  			
 		  	});
 		 
 		},
-		
-		afterRender: function(){
-			var self = this;
-			App.firstInit = false;	
-			
-			//Delegate events
-			App.view.delegateEvents();
-			App.Common.delegateEvents();	
-			FastClick.attach(document.body);
-	  		
-		},
-	  		    
+
+   
 	    changeRoute: function(e) {
 	    	e.preventDefault();
 	    	var self = this,

@@ -6,7 +6,6 @@ define([
     'views/home',
     'views/map',
     'views/sendtoy',
-    //.....
     
     'router',
 ], function (App) {

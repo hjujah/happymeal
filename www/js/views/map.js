@@ -4,19 +4,17 @@ Author: Filip Arneric
 */
 define(['app',
 		'pxloader',
-		'text!../../templates/hbs/home.hbs', 
+		'text!../../templates/hbs/map.hbs', 
 		], function(App, PxLoader, Template) {
 
 	App.Views.Map = Backbone.View.extend({
-	
-		template: Handlebars.compile(Template),
+		el: '#main',
 		manage: true,
+		template: Handlebars.compile(Template),
 		
-		/*
-getFetchURL: function(){
-			return absurl + "/api/page/cs/dockpark";
+		getFetchURL: function(){
+			return absurl + "/api/setup";
 		},
-*/
 		
 		preload: function(callback){
 			var self = this;
@@ -33,16 +31,17 @@ getFetchURL: function(){
 	    
 	    	
 		beforeRender: function(){
-			//console.log(self.dataCollection[0].page);
+			
 		},
 		
 		afterRender: function(){
-			alert(123);
+			this.delegateEvents();
 		},
-		
+			
 		serialize: function() {
+			var self = this;
 		    return {
-		      collection: /* App.layout.dataCollection[0].page */ 'smth',
+		      data: self.dataCollection[0].languages,
 		      test: 'test'
 		    };
 		}
